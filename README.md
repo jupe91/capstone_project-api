@@ -21,7 +21,7 @@ Displays:
 
 Clone the repository:
 
-• git clone https://github.com/jupe91/capstone_projects.git
+• git clone https://github.com/jupe91/capstone_project-api.git
 
 • Ensure you have Node.js installed
 
