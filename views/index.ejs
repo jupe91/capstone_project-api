@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV Index Checker</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌞 UV Index Checker</h1>
+        <!-- Form to input latitude and longitude -->
+        <form action="/uv" method="GET">
+            <label for="lat">Latitude:</label>
+            <input type="text" name="lat" id="lat" value="65.03" required>
+            <label for="lng">Longitude:</label>
+            <input type="text" name="lng" id="lng" value="25.49" required>
+            <!-- Submit button to fetch UV data -->
+            <button type="submit">Get UV Data</button>
+        </form>
+        <!-- This section displays UV data if it exists -->
+        <% if (uvData) { %>
+            <div class="result-box">
+                <!-- Title for the UV data section -->
+                <h2>☀️ UV Index Data</h2>
+                <!-- Display current UV Index -->
+                <p>🌡️ <strong>Current UV Index:</strong> <%= uvData.uv %></p>
+                <!-- Display max UV Index for today -->
+                <p>📈 <strong>Max UV Index Today:</strong> <%= uvData.uv_max %></p>
+                <!-- Display the Ozone level -->
+                <p>🧴 <strong>Ozone Level:</strong> <%= uvData.ozone %> DU</p>
+                <!-- Display the solar noon time (formatted in UTC) -->
+                <p>🕰️ <strong>Solar Noon Time:</strong> <%= new Date(uvData.uv_max_time).toUTCString() %></p>
+            </div>
+        <% } %>
+
+    </div>
+
+</body>
+</html>
