@@ -21,7 +21,7 @@ Displays:
 
 Clone the repository:
 
-• git clone <your-repo-url>
+• git clone https://github.com/jupe91/capstone_projects.git
 
 • Ensure you have Node.js installed
 
@@ -34,7 +34,9 @@ Clone the repository:
 
     2. Add the following content to the .env file: OPENUV_API_KEY=your_api_key_here
 
-    3. Replace your_api_key_here with your actual OpenUV API key. You can get an API key from: https://www.openuv.io/dashboard
+    3. Replace your_api_key_here with your actual OpenUV API key. 
+    
+    You can get an API key from: https://www.openuv.io/dashboard
 
 • Open the project in VS Code.
 
